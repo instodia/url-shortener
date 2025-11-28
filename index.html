@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>URL Shortener</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Main Centered Content -->
+  <div class="main-content">
+    <div class="box">
+      <h2>URL Shortener</h2>
+
+      <!-- Long URL -->
+      <input type="url" id="longUrl" placeholder="https://example.com/long-url" />
+
+      <!-- Custom Alias Row -->
+      <div class="custom-url-row">
+        <span class="prefix">https://da.gd/</span>
+        <input type="text" id="customAlias" placeholder="your-alias*" oninput="updateColor()" />
+      </div>
+
+      <!-- Note -->
+      <div class="note">* Leave your-alias blank for random URL</div><br>
+
+      <!-- Button -->
+      <button class="shorten-btn" onclick="shortenUrl()">Shorten URL</button>
+
+      <!-- Result -->
+      <div id="result" class="result"></div>
+    </div>
+  </div>
+
+  <!-- Custom JS -->
+  <script src="script.js" defer></script>
+</body>
+</html>
